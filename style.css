@@ -93,7 +93,7 @@ section h2 {
 
 .product-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -153,8 +153,19 @@ footer {
 }
 
 
-/* Mobile layout */
+/* Media layout */
 
+/* Tablet layout */
+
+@media (max-width: 900px) {
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* Mobile Layout */
 @media (max-width: 600px) {
 
     nav a {
@@ -174,4 +185,41 @@ footer {
         padding: 10px;
     }
 
+}
+
+/* Product card improvements */
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-card h3 {
+    margin: 15px 0 8px;
+    color: #333;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b6b3a;
+    margin: 15px 0;
+}
+
+.product-card button {
+    width: 100%;
 }
